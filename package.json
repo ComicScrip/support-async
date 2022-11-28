@@ -1,0 +1,27 @@
+{
+  "name": "support-async",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ComicScrip/support-async.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ComicScrip/support-async/issues"
+  },
+  "homepage": "https://github.com/ComicScrip/support-async#readme",
+  "dependencies": {
+    "axios": "1.2.0",
+    "node-fetch": "^3.3.0",
+    "node-fetch-commonjs": "^3.2.4",
+    "sqlite3": "^5.1.2",
+    "typeorm": "^0.3.10"
+  }
+}

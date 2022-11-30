@@ -21,7 +21,7 @@ async function run() {
   console.timeEnd("fetch repos");
 
   const { items: mostPopularRepos } = await res.json();
-  const toInsertInDB = mostPopularRepos.map(({ name, stargazers_count }) => {
+  const reposToInsert = mostPopularRepos.map(({ name, stargazers_count }) => {
     return {
       name,
       stars: stargazers_count,
@@ -30,7 +30,8 @@ async function run() {
 
   console.log(new Date(), "saving most popular repos to database");
   console.time("save repos");
-  await db.getRepository(GitHubRepoEntity).save(toInsertInDB);
+
+  await db.getRepository(GitHubRepoEntity).save(reposToInsert);
   console.timeEnd("save repos");
 }
 
